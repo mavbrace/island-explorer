@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/porthole_outline.png</file>
+        <file>resources/scene00.png</file>
+        <file>resources/binoculars.png</file>
+        <file>resources/seeIcon.png</file>
+        <file>resources/mapMid.png</file>
+        <file>resources/mapE.png</file>
+        <file>resources/mapN.png</file>
+        <file>resources/mapS.png</file>
+        <file>resources/mapW.png</file>
+        <file>resources/scene01.png</file>
+        <file>resources/lookeye.png</file>
+        <file>resources/redX.png</file>
+        <file>resources/scene02.png</file>
+        <file>resources/scene03.png</file>
+        <file>resources/symbol.png</file>
+        <file>resources/scene03a.png</file>
+        <file>resources/scene03b.png</file>
+        <file>resources/scene03c.png</file>
+        <file>resources/scene03d.png</file>
+        <file>resources/scene00a.png</file>
+        <file>resources/scene00c.png</file>
+        <file>resources/scene00b.png</file>
+        <file>resources/scene00d.png</file>
+        <file>resources/scene02b.png</file>
+        <file>resources/scene02a.png</file>
+        <file>resources/scene02c.png</file>
+        <file>resources/scene02d.png</file>
+        <file>resources/scene01a.png</file>
+        <file>resources/scene01b.png</file>
+        <file>resources/scene01c.png</file>
+        <file>resources/scene01d.png</file>
+        <file>resources/shipImg.png</file>
+    </qresource>
+</RCC>
