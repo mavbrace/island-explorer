@@ -7,7 +7,7 @@ endDialog::endDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->quitButton, SIGNAL(released()), qApp, SLOT(quit()));
+    connect(ui->quitButton, SIGNAL(released()), parent, SLOT(quitGame()));
 }
 
 endDialog::~endDialog()

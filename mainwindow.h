@@ -25,6 +25,7 @@ public slots:
     void handleLookWindowClosed();
     void switchToPortholeTab();
     void handleEndGameButton();
+    void quitGame();
 
 protected:
     void keyReleaseEvent(QKeyEvent*);

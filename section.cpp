@@ -129,3 +129,9 @@ std::vector<item*> Section::setItemVectorFromNames(){
     return itemsTemp; //return vector of item objects
 
 }
+
+void Section::freeAllItems(){
+    for (itemVecIt iter = items.begin(); iter != items.begin()+itemCount; iter++){
+        delete *iter;
+    }
+}

@@ -33,6 +33,7 @@ public:
    QString getIndividualItemName(int);
    int getItemCount();
    std::vector<item*> setItemVectorFromNames();
+   void freeAllItems();
    //-----------------//
    static const mappedSectionNames SECTION_NAMES;
 };

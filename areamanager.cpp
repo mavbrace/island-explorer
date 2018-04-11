@@ -36,7 +36,7 @@ areaManager::areaManager(int sID) {
     // initialize 5 new sections (per area).
     sections.reserve(NUM_SECTIONS);
     for (int i = 0; i < NUM_SECTIONS; i++){
-        sections.push_back(new Section(i,sID)); //note: island ID == symbol ID. Just a unique id.
+        sections.push_back(new Section(i,sID)); //note: island ID == symbol ID. Just a unique id relating to the island's symbol.
     }
     generateIsland();
 
@@ -113,6 +113,15 @@ void areaManager::_addItemsToLookWindow(){
     lookWindow::itemNames.clear(); //clear.
     for (int i = 0; i < s->getItemCount(); i++){
         lookWindow::itemNames.push_back(s->getIndividualItemName(i));
+    }
+}
+
+void areaManager::freeAllSections(){
+    for (sectionVecIt it = sections.begin(); it != sections.end(); it++){
+        //for each section, first free all items inside it
+        (*it)->freeAllItems();
+        //free the sections vector
+        delete *it;
     }
 }
 

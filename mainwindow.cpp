@@ -6,6 +6,7 @@
 #include "enddialog.h"
 #include "start.h"
 
+#include <QApplication>
 #include <QLabel>
 #include <QKeyEvent>
 #include <QIcon>
@@ -243,9 +244,29 @@ void MainWindow::handleEndGameButton(){
     theEnd->setWindowFlags(Qt::CustomizeWindowHint|Qt::WindowTitleHint);
     theEnd->move(QPoint(0,0));
     theEnd->exec();
+}
 
-    //DELETE.......
+//----QUIT---
+void MainWindow::quitGame(){
+    //user has confirmed that they want to quit the game. Now, close application.
+    qDebug() << "Quiting the game...";
+    //First, DELETE....... (memory management~ though I'm sure it's not totally necessary here, last minute)
+    //(a) items from each section
+    //(b) sections
+    //(c) islands
+    //(d) areaPorthole, testship, and inventory
 
+    //a, b, and c
+    for (islandsVecIt it = islands.begin(); it != islands.end(); it++){
+        (*it)->freeAllSections(); //deletes items, then secions
+        //delete the island, finally
+        delete *it;
+    }
 
+    //d
+    delete areaPorthole, testship, inventory;
+
+    //Second, QUIT
+    QApplication::quit();
 }
 

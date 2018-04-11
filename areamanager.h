@@ -9,6 +9,8 @@
 #include "area.h"
 #include "item.h"
 
+typedef std::vector<Section*>::iterator sectionVecIt;
+
 /* each island [area] has 5 [sections] */
 
 class areaManager {
@@ -34,6 +36,8 @@ public:
     int getSymbolID();
     QString getFullDesc();
     int getCurrentSection();
+
+    void freeAllSections();
 
 private:
     std::vector<Section*> sections; //ARRAY of [5]. Should == NUM_SECTIONS above. (gotta be a vector)
